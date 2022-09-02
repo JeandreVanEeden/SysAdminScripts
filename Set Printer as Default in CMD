@@ -1,0 +1,17 @@
+Set Default Printer Command Line
+-------------------------------------
+Step 1: Run Command Prompt as administrator.
+
+Type Command Prompt in Windows search bar,
+Right-click the most-matched item and then select Run as administrator from the menu.
+Step 2: In order to get the list of all the printers installed on your machine, on the Command Line window, type the following command and then press the Enter key to run this command.
+
+wmic printer get name,default
+
+Step 3: Get default printer name by simple copy-paste
+Step 4: Set default printer command line by typing the following command and then press the Enter key to run the command
+--------------------------------------------------------------
+wmic printer where name='Printer Name' call setdefaultprinter
+--------------------------------------------------------------
+You can also automate this if Windows keeps removing the default printer.
+This way if you know the printer name you can save the file as .bat and let a user run it & set the correct printer as default
