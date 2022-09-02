@@ -1,0 +1,11 @@
+You use these to delete all printers in Windows registry
+Sometimes when signing out & in too many times Windows creates duplicate printers in registry slowing apps such as Sage Pastel down 
+When you reboot the PC or re-sign into the RDP Server user then only the printers that showed up in device manager will show up in registry & not the duplicates
+
+You open CMD as admin & run these
+
+reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PrinterPorts" /va /f
+
+reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Devices" /va /f
+
+You can save a TXT file as .bat & let the user run it themselves too.
